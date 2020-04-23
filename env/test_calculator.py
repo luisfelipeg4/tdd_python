@@ -41,6 +41,10 @@ class TestMyCalculator(unittest.TestCase):
         self.calc.division(6,0) 
         self.assertEqual(0, self.calc.value)
 
-
+    def test_div_fail_list(self):
+        try:
+            self.calc.division(1, 's') 
+        except Exception as e:
+            self.assertEqual(str(e),"unsupported operand type(s) for /: 'int' and 'str'" )
         
         
