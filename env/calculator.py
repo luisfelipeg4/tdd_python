@@ -6,11 +6,13 @@ class Calculator:
     
     def add(self,a,b):
         self.value = a + b
+    
     def minus(self,a,b):
         self.value = a - b
-    def div(self,a,b):
-        self.value = a / b
-    def mul(self,a,b):
-        self.value = a * b
-    def mod(self,a,b):
-        self.value = a % b
+
+    def division(self,a,b):
+        try:
+            self.value = a/b
+        except ZeroDivisionError:
+            self.value=0
+        
